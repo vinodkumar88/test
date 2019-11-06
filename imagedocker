@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    def customImage = docker.build("centos:latest}")
+    def customImage = docker.build("centos}")
 
     customImage.inside {
         sh 'make test'
