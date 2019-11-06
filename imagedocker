@@ -5,7 +5,7 @@ node ("unix-ssh") {
 
     customImage.inside {
 //        sh 'make test'
-        sh 'rpm -qa > tes'
+        sh 'yum install -y ntp'
 
     }
 }
