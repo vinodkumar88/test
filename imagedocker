@@ -1,7 +1,7 @@
 node ("unix-ssh") {
     checkout scm
 
-    def customImage = docker.build("centos}")
+    def customImage = docker.build("apptest:v1" , "/root/workdir")
 
     customImage.inside {
         sh 'make test'
