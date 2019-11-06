@@ -1,0 +1,18 @@
+pipeline {
+    agent {
+        docker {
+            image 'centos'
+//          args '-v $HOME/.m2:/root/.m2'
+            label 'unix-ssh'
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'rpm -qa|wc -l'
+                sh 'yum install ntpdate'
+                sh 'rpm -qa|wc -l'
+            }
+        }
+    }
+}
