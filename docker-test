@@ -3,6 +3,7 @@ pipeline {
         docker {
         image 'node:7-alpine'
         label 'unix-ssh'
+          }
     }
     stages {
         stage('Test') {
