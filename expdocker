@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'rpm -qa|wc -l'
-                sh 'yum install ntpdate'
+                sh 'yum install -y ntpdate'
                 sh 'rpm -qa|wc -l'
             }
         }
