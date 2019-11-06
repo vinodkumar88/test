@@ -4,7 +4,7 @@ node ("unix-ssh") {
     def customImage = docker.build("app1t:v1" , "/root/workdir")
 
     customImage.inside {
-        sh 'make test'
+\\        sh 'make test'
         sh 'rpm -qa > tes'
 
     }
