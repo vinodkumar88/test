@@ -1,5 +1,4 @@
-node {
-    label 'unix-ssh'
+node ("unix-ssh") {
     checkout scm
 
     def customImage = docker.build("centos}")
