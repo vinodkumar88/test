@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh 'rpm -qa|wc -l'
                 sh 'yum install -y ntpdate'
+                sh '/bin/bash'
             }
         }
         stage('Test') {
