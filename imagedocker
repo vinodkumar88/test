@@ -6,7 +6,7 @@ node ("unix-ssh") {
     def customImage = docker.build("app1t:v3")
 //    def customImage = docker.build("app1t:v2" , "/root/workdir")
 
-    customImage.push()
+    customImage.push(vinodahri/get-started)
     customImage.inside {
 //        sh 'make test'
         sh 'yum install -y ntp'
