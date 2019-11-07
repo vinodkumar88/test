@@ -1,7 +1,7 @@
 node ("unix-ssh") {
     checkout scm
 
-      docker.withRegistry('https://hub.docker.com', 'dockerhubcert') {
+      docker.withRegistry('', 'dockerhubcert') {
 
     def customImage = docker.build("app1t:v3")
 //    def customImage = docker.build("app1t:v2" , "/root/workdir")
