@@ -6,7 +6,7 @@ node ("unix-ssh") {
     def customImage = docker.build("vinodahri/jenkins:appt1")
 //    def customImage = docker.build("app1t:v2" , "/root/workdir")
 
-    customImage.push(appt1)
+    customImage.push()
 //      sh 'docker push  vinodahri/get-started:applt' 
     customImage.inside {
 //        sh 'make test'
